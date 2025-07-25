@@ -19,15 +19,15 @@ const BurnBelief = () => {
     }
   };
 
-  const affirmations = [
-    "That belief no longer serves your divine nature.",
-    "You are free from that limiting story.",
-    "Your true godly essence shines through.",
-    "The fire has purified your mind.",
-    "You are reborn in divine truth."
+  const truthBombs = [
+    "That belief was never yours to begin with. You inherited someone else's limitation.",
+    "You don't need healing. You need to stop believing you're broken.",
+    "The story you just burned was keeping you small. Good riddance.",
+    "Beliefs aren't facts. You just deleted a fiction.",
+    "You were never damaged goods. That was just poor programming."
   ];
 
-  const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
+  const randomTruthBomb = truthBombs[Math.floor(Math.random() * truthBombs.length)];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-sacred/20 flex items-center justify-center p-4">
@@ -50,14 +50,14 @@ const BurnBelief = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground">
-              What limiting belief is ready to be transformed by divine fire?
+              What limiting belief needs to be deleted from your operating system?
             </p>
             
             <div className="space-y-6">
               <Input
                 value={belief}
                 onChange={(e) => setBelief(e.target.value)}
-                placeholder="I can't achieve my dreams because..."
+                placeholder="I'm not good enough because..."
                 className="text-lg py-6 text-center bg-card/50 backdrop-blur-sm border-divine/30 focus:border-divine"
                 onKeyPress={(e) => e.key === 'Enter' && handleBurn()}
               />
@@ -76,10 +76,18 @@ const BurnBelief = () => {
         ) : (
           <div className="text-center space-y-8 animate-scale-in">
             <div className="text-8xl animate-pulse">🔥</div>
-            <h2 className="text-4xl font-bold text-divine">BURNED!</h2>
+            <h2 className="text-4xl font-bold text-divine">DELETED</h2>
             <p className="text-xl text-foreground bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-divine/30">
-              {randomAffirmation}
+              {randomTruthBomb}
             </p>
+            <Button
+              onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
+              variant="celestial"
+              size="lg"
+              className="hover-scale"
+            >
+              Get Real Truth from Lucene →
+            </Button>
           </div>
         )}
       </div>

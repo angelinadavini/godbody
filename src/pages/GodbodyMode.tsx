@@ -10,19 +10,19 @@ const GodbodyMode = () => {
   const navigate = useNavigate();
 
   const clarityResponses = {
-    "Change My Perception": [
-      "Your reality is a reflection of your internal state. Change the state, change the reality.",
-      "The problem isn't what happened. The problem is the story you're telling about what happened.",
-      "You're not stuck in your circumstances. You're stuck in your thinking about your circumstances.",
-      "Every 'problem' is actually a request from the universe to level up.",
-      "Your current perception is just one possible way to see this. What if you chose the empowering way?"
+    "Cut Through the BS": [
+      "You're not confused. You know exactly what to do. You're just scared of what it will cost you.",
+      "The problem isn't that you don't know. The problem is you don't want to do what you know.",
+      "Stop asking for clarity when you're really asking for permission to avoid responsibility.",
+      "You're not lost. You're stalling because the truth requires action you don't want to take.",
+      "Clarity isn't missing. Courage is."
     ],
-    "Give Me Clarity": [
-      "The answer you seek is in the action you're avoiding.",
-      "You already know what to do. You're just afraid of what success will require you to become.",
-      "Clarity comes from engagement, not thought. Stop thinking, start doing.",
-      "The path is revealed by walking it, not by staring at the map.",
-      "You don't need more information. You need more courage to act on what you already know."
+    "Face Reality": [
+      "Your circumstances are a direct result of your choices. Own that first.",
+      "You're not a victim of your past. You're a volunteer for your present.",
+      "The story you tell about why you can't is exactly why you won't.",
+      "Every 'I can't' is really 'I won't' in disguise.",
+      "Reality doesn't care about your feelings. It responds to your actions."
     ]
   };
 
@@ -56,28 +56,37 @@ const GodbodyMode = () => {
           </h1>
           
           <p className="text-xl text-muted-foreground">
-            Activate your divine clarity and perception.
+            Cut through the illusions. Get the unfiltered truth.
           </p>
           
           <div className="text-6xl mb-8">⚡</div>
           
           <div className="space-y-6">
             <Button
-              onClick={() => handleClarityClick("Change My Perception")}
+              onClick={() => handleClarityClick("Cut Through the BS")}
               variant="divine"
               size="lg"
               className="w-full text-xl py-8 hover-scale"
             >
-              Change My Perception
+              Cut Through the BS
             </Button>
             
             <Button
-              onClick={() => handleClarityClick("Give Me Clarity")}
+              onClick={() => handleClarityClick("Face Reality")}
               variant="celestial"
               size="lg"
               className="w-full text-xl py-8 hover-scale"
             >
-              Give Me Clarity
+              Face Reality
+            </Button>
+
+            <Button
+              onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
+              variant="sacred"
+              size="lg"
+              className="w-full text-xl py-8 hover-scale"
+            >
+              Talk to Lucene Directly →
             </Button>
           </div>
         </div>
@@ -88,7 +97,7 @@ const GodbodyMode = () => {
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-center">
               <span className="bg-gradient-to-r from-divine to-accent bg-clip-text text-transparent">
-                Divine Truth
+                Raw Truth
               </span>
             </DialogTitle>
           </DialogHeader>
@@ -96,13 +105,22 @@ const GodbodyMode = () => {
             <p className="text-lg text-foreground leading-relaxed text-center">
               {selectedClarity}
             </p>
-            <Button
-              onClick={() => setShowClarityModal(false)}
-              variant="divine"
-              className="w-full mt-6"
-            >
-              Integrate This Truth
-            </Button>
+            <div className="flex gap-3">
+              <Button
+                onClick={() => setShowClarityModal(false)}
+                variant="celestial"
+                className="flex-1"
+              >
+                Got It
+              </Button>
+              <Button
+                onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
+                variant="divine"
+                className="flex-1"
+              >
+                More Truth from Lucene →
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>

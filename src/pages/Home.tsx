@@ -48,16 +48,16 @@ const Home = () => {
             className="w-full text-xl py-8 hover-scale"
             onClick={() => navigate('/godbody-mode')}
           >
-            Godbody Mode
+            Truth Mode
           </Button>
           
           <Button 
             variant="outline" 
             size="lg" 
             className="w-full text-xl py-8 hover-scale border-divine/30 text-divine hover:bg-divine/10"
-            onClick={() => navigate('/transmission-drops')}
+            onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
           >
-            Transmission Drops
+            Talk to Lucene →
           </Button>
         </div>
       </div>

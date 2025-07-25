@@ -35,11 +35,11 @@ const Mirror = () => {
   };
 
   const truthBombs = [
-    "The person staring back is the only one who can change your story.",
-    "You've been running on autopilot. Time to take the wheel.",
-    "Every excuse you see in that reflection is a choice you're making.",
-    "The god in you is tired of the stories the human keeps telling.",
-    "Stop looking for validation in the mirror. BE the validation."
+    "The person staring back created every circumstance they're complaining about.",
+    "Stop looking for someone to save you. You're the only one with the power.",
+    "Every excuse you see in that reflection is a choice you keep making.",
+    "You're not a victim of your story. You're the author who keeps writing it.",
+    "The mirror doesn't lie. Everything you don't like is within your control to change."
   ];
 
   const randomTruthBomb = truthBombs[Math.floor(Math.random() * truthBombs.length)];
@@ -65,7 +65,7 @@ const Mirror = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground">
-              Face the one who's been running your story.
+              Face the one who's been writing your story.
             </p>
             
             <div className="text-6xl mb-8">🪞</div>
@@ -93,7 +93,7 @@ const Mirror = () => {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-background/80 backdrop-blur-sm p-4 rounded-lg border border-divine/30">
                   <p className="text-divine font-semibold text-center">
-                    See who's been running the story.
+                    See who's been writing the story.
                   </p>
                 </div>
               </div>
@@ -106,14 +106,24 @@ const Mirror = () => {
                 </p>
               </div>
               
-              <Button
-                onClick={closeCamera}
-                variant="celestial"
-                size="lg"
-                className="hover-scale"
-              >
-                Close Mirror
-              </Button>
+              <div className="flex gap-4 justify-center">
+                <Button
+                  onClick={closeCamera}
+                  variant="celestial"
+                  size="lg"
+                  className="hover-scale"
+                >
+                  Close Mirror
+                </Button>
+                <Button
+                  onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
+                  variant="divine"
+                  size="lg"
+                  className="hover-scale"
+                >
+                  Ask Lucene for Real Truth →
+                </Button>
+              </div>
             </div>
           </div>
         )}

@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// GODBODY Custom Colors
+				divine: {
+					DEFAULT: 'hsl(var(--divine-gold))',
+					gold: 'hsl(var(--divine-gold))'
+				},
+				celestial: 'hsl(var(--celestial-cream))',
+				sacred: 'hsl(var(--sacred-bronze))',
+				ethereal: 'hsl(var(--ethereal-white))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

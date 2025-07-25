@@ -63,30 +63,30 @@ const GodbodyMode = () => {
             
             <div className="text-4xl md:text-6xl mb-8">⚡</div>
             
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-5">
               <Button
                 onClick={() => handleClarityClick("Cut Through the BS")}
                 variant="divine"
                 size="lg"
-                className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
+                className="w-full text-lg md:text-xl py-5 hover-scale"
               >
                 Cut Through the BS
               </Button>
               
               <Button
                 onClick={() => handleClarityClick("Face Reality")}
-                variant="celestial"
+                variant="divine"
                 size="lg"
-                className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
+                className="w-full text-lg md:text-xl py-5 hover-scale"
               >
                 Face Reality
               </Button>
 
               <Button
                 onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
-                variant="sacred"
+                variant="lucene"
                 size="lg"
-                className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
+                className="w-full text-lg md:text-xl py-5 hover-scale"
               >
                 Talk to Lucene Directly →
               </Button>

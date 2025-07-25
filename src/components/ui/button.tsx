@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -18,14 +18,15 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        divine: "bg-gradient-to-r from-divine to-accent text-foreground font-semibold hover:shadow-lg hover:scale-105 shadow-divine",
+        divine: "bg-gradient-to-r from-divine to-accent text-foreground font-semibold hover:shadow-lg hover:scale-105 shadow-divine hover:font-bold",
         celestial: "bg-celestial border border-divine/20 text-sacred hover:bg-divine/10 hover:border-divine/40",
         sacred: "bg-sacred text-ethereal hover:bg-sacred/90 shadow-ethereal",
+        lucene: "bg-gradient-to-r from-divine-gold to-accent text-background font-bold border-2 border-divine-gold/50 hover:shadow-[0_0_30px_hsl(var(--divine-gold)/0.6)] hover:scale-105 hover:font-extrabold",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        sm: "h-9 rounded-lg px-3",
+        lg: "h-11 rounded-lg px-8 py-4",
         icon: "h-10 w-10",
       },
     },

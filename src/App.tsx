@@ -9,6 +9,7 @@ import BurnBelief from "./pages/BurnBelief";
 import Mirror from "./pages/Mirror";
 import GodbodyMode from "./pages/GodbodyMode";
 import TransmissionDrops from "./pages/TransmissionDrops";
+import NadasProphecies from "./pages/NadasProphecies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/mirror" element={<Mirror />} />
           <Route path="/godbody-mode" element={<GodbodyMode />} />
           <Route path="/transmission-drops" element={<TransmissionDrops />} />
+          <Route path="/nadas-prophecies" element={<NadasProphecies />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

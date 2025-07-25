@@ -10,6 +10,13 @@ import Mirror from "./pages/Mirror";
 import GodbodyMode from "./pages/GodbodyMode";
 import TransmissionDrops from "./pages/TransmissionDrops";
 import NadasProphecies from "./pages/NadasProphecies";
+import RealityCheckScanner from "./pages/RealityCheckScanner";
+import PerformanceDetector from "./pages/PerformanceDetector";
+import ResponsibilityMeter from "./pages/ResponsibilityMeter";
+import ChoiceClarifier from "./pages/ChoiceClarifier";
+import TruthDosing from "./pages/TruthDosing";
+import StoryKillerArchive from "./pages/StoryKillerArchive";
+import ToolsGrid from "./pages/ToolsGrid";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +35,13 @@ const App = () => (
           <Route path="/godbody-mode" element={<GodbodyMode />} />
           <Route path="/transmission-drops" element={<TransmissionDrops />} />
           <Route path="/nadas-prophecies" element={<NadasProphecies />} />
+          <Route path="/reality-check" element={<RealityCheckScanner />} />
+          <Route path="/performance-detector" element={<PerformanceDetector />} />
+          <Route path="/responsibility-meter" element={<ResponsibilityMeter />} />
+          <Route path="/choice-clarifier" element={<ChoiceClarifier />} />
+          <Route path="/truth-dosing" element={<TruthDosing />} />
+          <Route path="/story-killer" element={<StoryKillerArchive />} />
+          <Route path="/tools" element={<ToolsGrid />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

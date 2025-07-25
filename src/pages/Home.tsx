@@ -68,6 +68,15 @@ const Home = () => {
             <Button 
               variant="outline" 
               size="lg" 
+              className="w-full text-xl py-8 hover-scale border-celestial/30 text-celestial hover:bg-celestial/10"
+              onClick={() => navigate('/tools')}
+            >
+              Truth Tools
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg" 
               className="w-full text-xl py-8 hover-scale border-divine/30 text-divine hover:bg-divine/10"
               onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
             >

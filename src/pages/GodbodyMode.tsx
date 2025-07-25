@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import MobileNavBar from "@/components/MobileNavBar";
 
 const GodbodyMode = () => {
   const [showClarityModal, setShowClarityModal] = useState(false);
@@ -37,60 +38,64 @@ const GodbodyMode = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-divine/20 flex items-center justify-center p-4">
-      <div className="w-full max-w-2xl mx-auto">
-        <Button
-          variant="ghost"
-          onClick={() => navigate('/')}
-          className="mb-8 text-muted-foreground hover:text-divine"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
-        </Button>
+    <>
+      <div className="min-h-screen bg-gradient-to-b from-background to-divine/20 flex items-center justify-center p-4 pb-20 md:pb-4">
+        <div className="w-full max-w-2xl mx-auto">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="mb-8 text-muted-foreground hover:text-divine"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Button>
 
-        <div className="text-center space-y-8 animate-fade-in">
-          <h1 className="text-5xl font-bold">
-            <span className="bg-gradient-to-r from-divine via-accent to-sacred bg-clip-text text-transparent">
-              Godbody Mode
-            </span>
-          </h1>
-          
-          <p className="text-xl text-muted-foreground">
-            Cut through the illusions. Get the unfiltered truth.
-          </p>
-          
-          <div className="text-6xl mb-8">⚡</div>
-          
-          <div className="space-y-6">
-            <Button
-              onClick={() => handleClarityClick("Cut Through the BS")}
-              variant="divine"
-              size="lg"
-              className="w-full text-xl py-8 hover-scale"
-            >
-              Cut Through the BS
-            </Button>
+          <div className="text-center space-y-8 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              <span className="bg-gradient-to-r from-divine via-accent to-sacred bg-clip-text text-transparent">
+                Godbody Mode
+              </span>
+            </h1>
             
-            <Button
-              onClick={() => handleClarityClick("Face Reality")}
-              variant="celestial"
-              size="lg"
-              className="w-full text-xl py-8 hover-scale"
-            >
-              Face Reality
-            </Button>
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Cut through the illusions. Get the unfiltered truth.
+            </p>
+            
+            <div className="text-4xl md:text-6xl mb-8">⚡</div>
+            
+            <div className="space-y-4 md:space-y-6">
+              <Button
+                onClick={() => handleClarityClick("Cut Through the BS")}
+                variant="divine"
+                size="lg"
+                className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
+              >
+                Cut Through the BS
+              </Button>
+              
+              <Button
+                onClick={() => handleClarityClick("Face Reality")}
+                variant="celestial"
+                size="lg"
+                className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
+              >
+                Face Reality
+              </Button>
 
-            <Button
-              onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
-              variant="sacred"
-              size="lg"
-              className="w-full text-xl py-8 hover-scale"
-            >
-              Talk to Lucene Directly →
-            </Button>
+              <Button
+                onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
+                variant="sacred"
+                size="lg"
+                className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
+              >
+                Talk to Lucene Directly →
+              </Button>
+            </div>
           </div>
         </div>
       </div>
+
+      <MobileNavBar />
 
       <Dialog open={showClarityModal} onOpenChange={setShowClarityModal}>
         <DialogContent className="max-w-2xl bg-card/80 backdrop-blur-sm border border-divine/30">
@@ -105,7 +110,7 @@ const GodbodyMode = () => {
             <p className="text-lg text-foreground leading-relaxed text-center">
               {selectedClarity}
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 mt-6">
               <Button
                 onClick={() => setShowClarityModal(false)}
                 variant="celestial"
@@ -124,7 +129,7 @@ const GodbodyMode = () => {
           </div>
         </DialogContent>
       </Dialog>
-    </div>
+    </>
   );
 };
 

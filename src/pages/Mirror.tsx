@@ -45,90 +45,94 @@ const Mirror = () => {
   const randomTruthBomb = truthBombs[Math.floor(Math.random() * truthBombs.length)];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-celestial/20 flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl mx-auto">
-        <Button
-          variant="ghost"
-          onClick={() => navigate('/')}
-          className="mb-8 text-muted-foreground hover:text-divine"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
-        </Button>
+    <>
+      <div className="min-h-screen bg-gradient-to-b from-background to-celestial/20 flex items-center justify-center p-4 pb-20 md:pb-4">
+        <div className="w-full max-w-4xl mx-auto">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="mb-8 text-muted-foreground hover:text-divine"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Button>
 
-        {!isCameraOpen ? (
-          <div className="text-center space-y-8 animate-fade-in">
-            <h1 className="text-5xl font-bold">
-              <span className="bg-gradient-to-r from-divine to-accent bg-clip-text text-transparent">
-                The Mirror
-              </span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground">
-              Face the one who's been writing your story.
-            </p>
-            
-            <div className="text-6xl mb-8">🪞</div>
-            
-            <Button
-              onClick={openCamera}
-              variant="divine"
-              size="lg"
-              className="text-xl py-8 px-12 hover-scale"
-            >
-              <Camera className="w-6 h-6 mr-3" />
-              OPEN MIRROR
-            </Button>
-          </div>
-        ) : (
-          <div className="space-y-6 animate-scale-in">
-            <div className="relative">
-              <video
-                ref={videoRef}
-                autoPlay
-                playsInline
-                muted
-                className="w-full max-w-2xl mx-auto rounded-lg border-4 border-divine/30 shadow-divine"
-              />
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-background/80 backdrop-blur-sm p-4 rounded-lg border border-divine/30">
-                  <p className="text-divine font-semibold text-center">
-                    See who's been writing the story.
+          {!isCameraOpen ? (
+            <div className="text-center space-y-8 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold">
+                <span className="bg-gradient-to-r from-divine to-accent bg-clip-text text-transparent">
+                  The Mirror
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Face the one who's been writing your story.
+              </p>
+              
+              <div className="text-4xl md:text-6xl mb-8">🪞</div>
+              
+              <Button
+                onClick={openCamera}
+                variant="divine"
+                size="lg"
+                className="text-lg md:text-xl py-6 md:py-8 px-8 md:px-12 hover-scale"
+              >
+                <Camera className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+                OPEN MIRROR
+              </Button>
+            </div>
+          ) : (
+            <div className="space-y-6 animate-scale-in">
+              <div className="relative">
+                <video
+                  ref={videoRef}
+                  autoPlay
+                  playsInline
+                  muted
+                  className="w-full max-w-2xl mx-auto rounded-lg border-4 border-divine/30 shadow-divine"
+                />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-background/80 backdrop-blur-sm p-4 rounded-lg border border-divine/30">
+                    <p className="text-divine font-semibold text-center text-sm md:text-base">
+                      See who's been writing the story.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center space-y-4">
+                <div className="bg-card/50 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-accent/30 max-w-2xl mx-auto">
+                  <p className="text-base md:text-lg text-foreground font-medium">
+                    {randomTruthBomb}
                   </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    onClick={closeCamera}
+                    variant="celestial"
+                    size="lg"
+                    className="hover-scale"
+                  >
+                    Close Mirror
+                  </Button>
+                  <Button
+                    onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
+                    variant="divine"
+                    size="lg"
+                    className="hover-scale"
+                  >
+                    Ask Lucene for Real Truth →
+                  </Button>
                 </div>
               </div>
             </div>
-            
-            <div className="text-center space-y-4">
-              <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-accent/30 max-w-2xl mx-auto">
-                <p className="text-lg text-foreground font-medium">
-                  {randomTruthBomb}
-                </p>
-              </div>
-              
-              <div className="flex gap-4 justify-center">
-                <Button
-                  onClick={closeCamera}
-                  variant="celestial"
-                  size="lg"
-                  className="hover-scale"
-                >
-                  Close Mirror
-                </Button>
-                <Button
-                  onClick={() => window.open('https://chatgpt.com/g/g-6883265829c881918ad03e9703373540-lucene', '_blank')}
-                  variant="divine"
-                  size="lg"
-                  className="hover-scale"
-                >
-                  Ask Lucene for Real Truth →
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+      
+      <MobileNavBar />
+    </>
   );
 };
 

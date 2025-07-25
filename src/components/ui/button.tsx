@@ -21,7 +21,7 @@ const buttonVariants = cva(
         divine: "bg-gradient-to-r from-divine to-accent text-foreground font-semibold hover:shadow-lg hover:scale-105 shadow-divine hover:font-bold",
         celestial: "bg-celestial border border-divine/20 text-sacred hover:bg-divine/10 hover:border-divine/40",
         sacred: "bg-sacred text-ethereal hover:bg-sacred/90 shadow-ethereal",
-        lucene: "bg-background/10 backdrop-blur-sm border-2 border-divine text-divine font-bold shadow-[0_0_20px_theme(colors.divine.DEFAULT/30%),inset_0_0_20px_theme(colors.divine.DEFAULT/10%)] hover:shadow-[0_0_40px_theme(colors.divine.DEFAULT/60%),inset_0_0_30px_theme(colors.divine.DEFAULT/20%)] hover:scale-105 hover:font-extrabold hover:border-divine/80",
+        lucene: "bg-background/10 backdrop-blur-sm border-2 border-divine text-divine font-bold shadow-[0_0_20px_hsl(45_95%_55%/0.3),inset_0_0_20px_hsl(45_95%_55%/0.1)] hover:shadow-[0_0_40px_hsl(45_95%_55%/0.6),inset_0_0_30px_hsl(45_95%_55%/0.2)] hover:scale-105 hover:font-extrabold hover:border-divine/80",
       },
       size: {
         default: "h-10 px-4 py-2",

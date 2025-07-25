@@ -1,6 +1,6 @@
 
 import { useNavigate, useLocation } from "react-router-dom";
-import { Home, Mirror, Flame, Zap, Grid3X3 } from "lucide-react";
+import { Home, Eye, Flame, Zap, Grid3X3 } from "lucide-react";
 
 const MobileNavBar = () => {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ const MobileNavBar = () => {
 
   const navItems = [
     { icon: Home, label: "Home", path: "/" },
-    { icon: Mirror, label: "Mirror", path: "/mirror" },
+    { icon: Eye, label: "Mirror", path: "/mirror" },
     { icon: Flame, label: "Burn", path: "/burn-belief" },
     { icon: Zap, label: "Truth", path: "/godbody-mode" },
     { icon: Grid3X3, label: "Tools", path: "/tools" },

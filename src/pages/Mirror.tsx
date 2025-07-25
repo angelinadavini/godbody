@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Camera } from "lucide-react";
+import MobileNavBar from "@/components/MobileNavBar";
 
 const Mirror = () => {
   const [isCameraOpen, setIsCameraOpen] = useState(false);

@@ -48,7 +48,7 @@ const Home = () => {
             </Button>
             
             <Button 
-              variant="celestial" 
+              variant="divine" 
               size="lg" 
               className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
               onClick={() => navigate('/mirror')}
@@ -57,7 +57,7 @@ const Home = () => {
             </Button>
             
             <Button 
-              variant="sacred" 
+              variant="divine" 
               size="lg" 
               className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
               onClick={() => navigate('/godbody-mode')}
@@ -66,18 +66,18 @@ const Home = () => {
             </Button>
             
             <Button 
-              variant="outline" 
+              variant="divine" 
               size="lg" 
-              className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale border-accent/30 text-accent hover:bg-accent/10"
+              className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
               onClick={() => navigate('/nadas-prophecies')}
             >
               Nada's Prophecies
             </Button>
             
             <Button 
-              variant="outline" 
+              variant="divine" 
               size="lg" 
-              className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale border-celestial/30 text-celestial hover:bg-celestial/10"
+              className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"
               onClick={() => navigate('/tools')}
             >
               Truth Tools

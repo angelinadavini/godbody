@@ -4,6 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Home from "./pages/Home";
+import BurnBelief from "./pages/BurnBelief";
+import Mirror from "./pages/Mirror";
+import GodbodyMode from "./pages/GodbodyMode";
+import TransmissionDrops from "./pages/TransmissionDrops";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -15,7 +20,12 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Index />} />
+          <Route path="/burn-belief" element={<BurnBelief />} />
+          <Route path="/mirror" element={<Mirror />} />
+          <Route path="/godbody-mode" element={<GodbodyMode />} />
+          <Route path="/transmission-drops" element={<TransmissionDrops />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

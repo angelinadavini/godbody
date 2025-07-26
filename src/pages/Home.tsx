@@ -39,6 +39,15 @@ const Home = () => {
           
           <div className="space-y-4 md:space-y-6">
             <Button 
+              variant="sacred" 
+              size="lg" 
+              className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale border-2 border-divine/50"
+              onClick={() => navigate('/founders-transmission')}
+            >
+              🔥 The Origin Transmission
+            </Button>
+            
+            <Button 
               variant="divine" 
               size="lg" 
               className="w-full text-lg md:text-xl py-6 md:py-8 hover-scale"

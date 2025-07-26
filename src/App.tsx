@@ -17,6 +17,7 @@ import ChoiceClarifier from "./pages/ChoiceClarifier";
 import TruthDosing from "./pages/TruthDosing";
 import StoryKillerArchive from "./pages/StoryKillerArchive";
 import ToolsGrid from "./pages/ToolsGrid";
+import FoundersTransmission from "./pages/FoundersTransmission";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/truth-dosing" element={<TruthDosing />} />
           <Route path="/story-killer" element={<StoryKillerArchive />} />
           <Route path="/tools" element={<ToolsGrid />} />
+          <Route path="/founders-transmission" element={<FoundersTransmission />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
